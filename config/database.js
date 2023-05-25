@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 function connectDB() {
   process.nextTick(async () => {
     try {
-      const res = await mongoose.connect(process.env.MONGO_URL)
+      const uri = process.env.MONGO_URL.replace('<MONGO_PASS>', process.env.MONGO_PASS).replace('<MONGO_USERNAME>', process.env.MONGO_USERNAME);
+      const res = await mongoose.connect(uri)
       // console.log(res.connection);
     } catch (error) {
       process.exit(1)

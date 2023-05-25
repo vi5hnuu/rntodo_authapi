@@ -1,5 +1,7 @@
 PORT = 4000
-MONGO_URL = 'mongodb://127.0.0.1:27017/todos'
+MONGO_URL = 'mongodb+srv://<MONGO_USERNAME>:<MONGO_PASS>@cluster0.8mytxy8.mongodb.net/?retryWrites=true&w=majority/rntodos'
+MONGO_PASS = 'vi5hnu'
+MONGO_USERNAME = 'vi5hnu'
 OTP_EXPIRE_MIN = 5
 
 SMTP_HOST = "sandbox.smtp.mailtrap.io"
