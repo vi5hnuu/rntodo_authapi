@@ -7,7 +7,7 @@ SMTP_PORT = 2525
 SMTP_USER = "0acd783a056c78"
 SMTP_PASS = "a0245a28aff1aa"
 
-JWT_COOKIE_EXPIRE_MIN = 10
+JWT_COOKIE_EXPIRE_MIN = 60
 
 SECRET_JWT = 'When life gives you melons, you might be dyslexic'
 
