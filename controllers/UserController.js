@@ -199,7 +199,6 @@ module.exports.forgotPassword = async (req, res) => {
         .json({ success: false, message: 'Invalid email!' })
     }
     //start pass reset
-    user.verified = false
     const otp = Math.floor(Math.random() * 1000000)
     user.resetPasswordOtp = otp
     user.resetPasswordOtp_expiry = new Date(Date.now() + process.env.OTP_EXPIRE_MIN * 60 * 1000)
