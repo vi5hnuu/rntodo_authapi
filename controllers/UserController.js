@@ -139,7 +139,7 @@ module.exports.getMyProfile = async (req, res) => {
 module.exports.updateProfile = async (req, res) => {
   try {
     const { name } = req.body
-    const avatarPath = req.files.avatar.tempFilePath
+    const avatarPath = req.files.avatar?.tempFilePath
     if (avatarPath) {
       if (req.user.avatar.public_id)
         await cloudinary.v2.uploader.destroy(req.user.avatar.public_id)
